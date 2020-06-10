@@ -5,3 +5,13 @@ Pillow
 https://github.com/pyrogram/pyrogram/archive/asyncio-dev.zip
 tgcrypto
 youtube-dl
+requests
+asyncio
+beautifulsoup4
+youtube-dl
+pySmartDL
+PyDrive
+urllib3
+URLObject>=2.1.1
+pycrypto>=2.6
+spotdl
