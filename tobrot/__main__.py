@@ -30,7 +30,8 @@ from tobrot.plugins.status_message_fn import (
     status_message_f,
     cancel_message_f,
     exec_message_f,
-    upload_document_f
+    upload_document_f,
+    eval_message_f
 )
 from tobrot.plugins.call_back_button_handler import button
 from tobrot.plugins.custom_thumbnail import (
@@ -57,6 +58,12 @@ if __name__ == "__main__" :
         filters=Filters.command(["leech"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_message_handler)
+    #
+    eval_message_handler = MessageHandler(
+        eval_message_f,
+        filters=Filters.command("eval") & Filters.chat(chats=AUTH_CHANNEL)
+    )
+    app.add_handler(eval_message_handler)
     #
     incoming_purge_message_handler = MessageHandler(
         incoming_purge_message_f,
